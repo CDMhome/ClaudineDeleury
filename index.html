@@ -1,124 +1,158 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Claudine Deleury</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Font Awesome pour les icônes -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  <style>
-    body {
-      background: #3d414c;
-      color: #fff;
-      font-family: 'Playfair Display', serif;
-      margin: 0;
-      padding: 0;
-    }
-    .container {
-      max-width: 420px;
-      margin: 30px auto;
-      background: #3d414c;
-      border-radius: 20px;
-      box-shadow: 0 0 16px #2226;
-      padding: 30px 20px 20px 20px;
-    }
-    .logo {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 18px;
-    }
-    .logo img {
-      max-width: 220px;
-      border-radius: 12px;
-      box-shadow: 0 0 12px #2228;
-      background: #3d414c;
-    }
-    .title {
-      text-align: center;
-      font-size: 2.2em;
-      font-weight: 700;
-      letter-spacing: 2px;
-      margin: 8px 0 15px 0;
-      color: #fff;
-    }
-    .links {
-      margin-top: 22px;
-    }
-    .link-item {
-      display: flex;
-      align-items: flex-start;
-      background: #454a57;
-      border-radius: 10px;
-      margin: 10px 0;
-      padding: 12px 16px;
-      transition: background 0.2s;
-    }
-    .link-item:hover {
-      background: #24262b;
-    }
-    .link-icon, .link-item i, .link-item img.icon {
-      font-size: 1.7em;
-      margin-right: 18px;
-      width: 30px;
-      text-align: center;
-      flex-shrink: 0;
-    }
-    .fa-linkedin {color: #0e76a8;}
-    .fa-facebook {color: #3b5998;}
-    .fa-instagram {color: #e1306c;}
-    .fa-tiktok {color: #010101;}
-    .fa-youtube {color: #ff0000;}
-    .fa-envelope {color: #7b8494;}
-    .fa-globe {color: #1790cf;}
-    .fa-phone, .fa-mobile-alt {color: #505767;}
-    .link-label {
-      flex: 1;
-      font-size: 1.15em;
-      letter-spacing: 0.5px;
-      text-decoration: none;
-      color: #fff;
-    }
-    a.link-label {
-      color: #fff;
-      text-decoration: none;
-    }
-    a.link-label:hover {
-      text-decoration: underline;
-    }
-    .bottom-image {
-      width: 100%;
-      display: block;
-      margin: 44px auto 0 auto;
-      max-width: 100%;
-      height: auto;
-    }
-    @media (max-width: 500px) {
-      .container { padding: 16px 3vw; }
-      .logo img { max-width: 95vw; }
-      .bottom-image { margin-top: 25px; }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>CDM Home - Carte de visite</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            background: #3d414c;
+            color: #fff;
+            font-family: 'Playfair Display', serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 420px;
+            margin: 30px auto;
+            background: #3d414c;
+            border-radius: 20px;
+            box-shadow: 0 0 16px #2226;
+            padding: 30px 20px 20px 20px;
+        }
+        .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 18px;
+        }
+        .logo img {
+            max-width: 220px;
+            border-radius: 12px;
+            box-shadow: 0 0 12px #2228;
+            background: #3d414c;
+        }
+        .title {
+            text-align: center;
+            font-size: 2.2em;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin: 8px 0 15px 0;
+            color: #fff;
+        }
+        .links {
+            margin-top: 22px;
+        }
+        .link-item {
+            display: flex;
+            align-items: flex-start;
+            background: #454a57;
+            border-radius: 10px;
+            margin: 10px 0;
+            padding: 12px 16px;
+            transition: background 0.2s;
+        }
+        .link-item:hover {
+            background: #24262b;
+        }
+        .link-icon, .link-item i, .link-item img.icon {
+            font-size: 1.7em;
+            margin-right: 18px;
+            width: 30px;
+            text-align: center;
+            flex-shrink: 0;
+        }
+        .fa-linkedin {color: #0e76a8;}
+        .fa-facebook {color: #3b5998;}
+        .fa-instagram {color: #e1306c;}
+        .fa-tiktok {color: #010101;}
+        .fa-youtube {color: #ff0000;}
+        .fa-envelope {color: #7b8494;}
+        .fa-globe {color: #1790cf;}
+        .fa-phone, .fa-mobile-alt {color: #505767;}
+        .link-label {
+            flex: 1;
+            font-size: 1.15em;
+            letter-spacing: 0.5px;
+            text-decoration: none;
+            color: #fff;
+        }
+        a.link-label {
+            color: #fff;
+            text-decoration: none;
+        }
+        a.link-label:hover {
+            text-decoration: underline;
+        }
+        /* Sous-liens (emails et téléphones doubles) - VERSION FINE */
+        .sub-links {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            flex: 1;
+            margin-top: 5px;
+        }
+        .sub-link {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin: 0 0 0 0;
+        }
+        .sub-logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1em;
+            margin-right: 8px;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            background: #4e5159;
+            color: #e0e0e0;
+            border: none;
+            flex-shrink: 0;
+        }
+        .sub-value {
+            color: #fff;
+            font-size: 1.04em;
+            opacity: 0.97;
+            text-decoration: none;
+            letter-spacing: 0.1px;
+        }
+        .linkedin-label {
+            font-size: 1.11em;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 6px;
+            margin-left: 1px;
+            letter-spacing: 0.1px;
+        }
+        .bottom-image {
+            width: 100%;
+            display: block;
+            margin: 44px auto 0 auto;
+            max-width: 100%;
+            height: auto;
+        }
+        @media (max-width: 500px) {
+            .container { padding: 16px 3vw; }
+            .logo img { max-width: 95vw; }
+            .bottom-image { margin-top: 25px; }
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <div class="logo">
-      <img src="LOGO.jpg" alt="Claudine Deleury Logo">
-    </div>
-    <div class="title">Claudine Deleury</div>
-    <div class="links">
-      <div class="link-item">
-        <i class="fab fa-linkedin link-icon"></i>
-        <a class="link-label" href="https://www.linkedin.com/in/claudine-deleury" target="_blank">LinkedIn</a>
-      </div>
-      <div class="link-item">
-        <i class="fas fa-envelope link-icon"></i>
-        <a class="link-label" href="mailto:claudine.deleury@email.com">claudine.deleury@email.com</a>
-      </div>
-      <!-- Tu peux dupliquer ce bloc pour ajouter d'autres liens (Facebook, Instagram, etc.) -->
-    </div>
-    <!-- Image ou illustration en bas de carte (optionnel) -->
-    <!-- <img class="bottom-image" src="ligne_archi.png" alt="Illustration"> -->
-  </div>
-</body>
-</html>
+    <div class="container">
+        <div class="logo">
+            <img src="LOGO.jpg" alt="CDM Home Logo">
+        </div>
+        <div class="title">CDM Home</div>
+        <div class="links">
+            <!-- LinkedIn double -->
+            <div class="link-item">
+                <i class="fab fa-linkedin link-icon"></i>
+                <div style="flex:1">
+                    <div*
